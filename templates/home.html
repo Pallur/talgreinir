@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Talgreinir</title>
+  <meta name="description" content="Talgreinir">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',
+      filename='styles/styles.css') }}">
+  
+</head>
+
+<body>
+    <h1>Speech Recognition</h1>
+    <h2>
+    Hi! 
+    </h2>
+    My name is Hans and I love colors.
+    <br>
+    Tell me your favorite color and I'll try to display it
+    </h2>
+    <h3>How To:</h3>
+    <p id="directions">
+    Firstly you have to get the CSS to work by 'hard reset'ing your browser:
+    <ul>
+        <li>Windows: Ctrl+F5</li>
+        <li>Mac: Cmd+Shift+R</li>
+        <li>Linux: Ctrl+Shift+R</li>
+    </ul>
+    You have to talk clearly and even if you do Hans still might get it wrong\
+    <br>
+    Please bear with him.
+    <br>
+    All primary, secondary and intermediate colors are available for display.
+    </p>
+    <form action="/command" method="post">
+        <input type="submit" value="Press me and talk!">
+        <p> You said: {{ command }}</p>
+    </form>
+    <div id= {{ box_id }}>
+        <p> Did Hans get it right? </p>
+    </div> 
+</body>
+</html>
