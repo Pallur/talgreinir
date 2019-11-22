@@ -17,9 +17,8 @@ def voice_command():
     return command
 
 def assistant(command):
-    "if statements for executing commands"
     print("you said :" + command)
-    #open website
+    
     if 'open' in command:
         reg_ex = re.search('open (.+)', command)
         if reg_ex:

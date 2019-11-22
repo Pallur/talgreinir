@@ -48,3 +48,13 @@ To get the CSS to work, you have to hard reset the browser. This is explained on
 
 Now you might be asking "but why is 'it' named Hans?". 
 
+---
+
+Þegar ég byrjaði á verkefninu var ég að fikta mikið með það sem hægt er að finna á tal.ru.is. Fann út að sú síða er byggð á [kalda](https://github.com/kaldi-asr/kaldi). Eftir að hafa verið að reyna að setja það upp á windows í heil langan tíma þá fór ég í það að setja upp Virtual vél og keyra Ubuntu á henni því ég bjóst við að það væri lítið mál að nota Linux með þessu.. **__það gékk ekki_**. 
+
+Eftir þetta ævintýri fór ég að reyna smíða minn eigin 'Speech Recognizer'. Ég byrjaði á að nota Spyder3 IDE umhverfið við þróunina og allt gekk einsog í sögu (svona næstum). Svo fór ég útí það að reyna að fá kóðann til að keyra á netinu. Ég ákvað að nota flask í þetta. 
+
+Til að gera langa sögu stutta, þá virkaði ekkert hjá mér **virkilega** lengi útaf Python-ið sem ég var að nota í cmd var 32bit en ekki 64bit einsog í Spyder3. Eftir að síðan komst í loftið vissi ég ekki alveg hvað ég vildi láta *Hans* gera nákvæmlega. Svo ég fór bara útí eitthvað einfalt en samt ágætlega skemmtilegt. 
+
+Vona hann standi sig vel.
+
