@@ -1,6 +1,7 @@
 # Hans likes colors and to open webs
 
 This is Hans, a speech recognizer. He can display 8 colors (the main colors) and open any website you desire. 
+He can only speak english.
 
 ---
 
