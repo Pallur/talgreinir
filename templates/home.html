@@ -8,6 +8,12 @@
   <meta name="description" content="Talgreinir">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',
       filename='styles/styles.css') }}">
+    
+  <style>
+
+    #box_id {background-color: {{ chex }}}
+      
+  </style>
   
 </head>
 
@@ -38,7 +44,7 @@
         <input type="submit" value="Press me and say a color!">
         <p> You said: {{ command }}</p>
     </form>
-    <div id={{ box_id }}>
+    <div id=box_id>
         <p> Did Hans get it right? </p>
     </div> 
     <p>
