@@ -18,10 +18,12 @@
         display: flex;
         align-items: center;
         text-align: center;
+        background-color: #F3FFBD;
       }
 
       .content {
-        max-width: 960px;
+        max-width: 700px;
+        max-height: 1000px;
         margin: auto;
       }
 
@@ -46,23 +48,31 @@
         position: relative;
       }
 
-
       .web {
-          position: relative;
+        position: relative;
+      }
+
+      input[type=submit] {
+        background-color: orange;
+        border: none;
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+        padding: 10px 20px;
+        cursor: pointer;
       }
 
       #circle {
         height: 75px;
         width: 75px;
         margin-bottom: 50px;
-        background-color: {{ chex }};
+        border: 1px solid black;
         border-radius: 50%;
         display: inline-block;
-        
+        background-color: {{ chex }};
       }
-
+    
     #nevermind { background-color: {{ nevermind }} }
-      
   </style>
 </head>
 
@@ -81,7 +91,7 @@
             <input type="submit" id="color_button" value="Press me and say a color!">
             <p id="you_said"> You said: {{ command }}</p>
         </form>
-        <span id=circle> {{ no_color }}</span> 
+        <span id=circle>{{ no_color }}</span> 
     </div>
     <div class="web">
         <form action="/open" id="web_form" method="post">

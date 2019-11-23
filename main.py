@@ -31,4 +31,4 @@ def open_web():
         return render_template("home.html", open = website)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
