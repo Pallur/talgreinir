@@ -1,6 +1,7 @@
 # Hans likes colors and to open webs
 
 This is Hans, a speech recognizer. He can display 8 colors (the main colors) and open any website you desire. 
+He can only speak english.
 
 ---
 
@@ -50,7 +51,7 @@ Now you might be asking "but why is 'it' named Hans?".
 
 ---
 
-Þegar ég byrjaði á verkefninu var ég að fikta mikið með það sem hægt er að finna á tal.ru.is. Fann út að sú síða er byggð á [kalda](https://github.com/kaldi-asr/kaldi). Eftir að hafa verið að reyna að setja það upp á windows í heil langan tíma þá fór ég í það að setja upp Virtual vél og keyra Ubuntu á henni því ég bjóst við að það væri lítið mál að nota Linux með þessu.. **__það gékk ekki_**. 
+Þegar ég byrjaði á verkefninu var ég að fikta mikið með það sem hægt er að finna á tal.ru.is. Fann út að sú síða er byggð á [kalda](https://github.com/kaldi-asr/kaldi). Eftir að hafa verið að reyna að setja það upp á windows í heil langan tíma þá fór ég í það að setja upp Virtual vél og keyra Ubuntu á henni því ég bjóst við að það væri lítið mál að nota Linux með þessu.. **_það gékk ekki_**. 
 
 Eftir þetta ævintýri fór ég að reyna smíða minn eigin 'Speech Recognizer'. Ég byrjaði á að nota Spyder3 IDE umhverfið við þróunina og allt gekk einsog í sögu (svona næstum). Svo fór ég útí það að reyna að fá kóðann til að keyra á netinu. Ég ákvað að nota flask í þetta. 
 
