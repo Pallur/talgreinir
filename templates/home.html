@@ -6,56 +6,89 @@
 
   <title>Talgreinir</title>
   <meta name="description" content="Talgreinir">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static',
-      filename='styles/styles.css') }}">
-    
-  <style>
 
-    #box_id {background-color: {{ chex }}}
+  <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+
+      .content {
+        max-width: 960px;
+        margin: auto;
+      }
+
+      .title {
+        position: relative;
+        text-align: center;
+      }
+
+      .info {
+        position: relative;
+      }
+
+      #hans_two {
+        margin-bottom: 0px;
+      }
+
+      #hans_things {
+        margin-top: 0px;
+      }
+
+      .say_color {
+        position: relative;
+      }
+
+
+      .web {
+          position: relative;
+      }
+
+      #circle {
+        height: 75px;
+        width: 75px;
+        margin-bottom: 50px;
+        background-color: {{ chex }};
+        border-radius: 50%;
+        display: inline-block;
+        
+      }
+
+    #nevermind { background-color: {{ nevermind }} }
       
   </style>
-  
 </head>
 
 <body>
-    <h1>Speech Recognition</h1>
-    <h2>
-    Hi! 
-    </h2>
-    My name is Hans and I love colors.
-    <br>
-    Tell me your favorite color and I'll try to display it
-    </h2>
-    <h3>How To:</h3>
-    <p id="directions">
-    Firstly you have to get the CSS to work by 'hard reset'ing your browser:
-    <ul>
-        <li>Windows: Ctrl+F5</li>
-        <li>Mac: Cmd+Shift+R</li>
-        <li>Linux: Ctrl+Shift+R</li>
-    </ul>
-    You have to talk clearly and even if you do Hans still might get it wrong
-    <br>
-    Please bear with him.
-    <br>
-    All primary, secondary and intermediate colors are available for display.
-    </p>
-    <form action="/command" method="post">
-        <input type="submit" value="Press me and say a color!">
-        <p> You said: {{ command }}</p>
-    </form>
-    <div id=box_id>
-        <p> Did Hans get it right? </p>
-    </div> 
-    <p>
-    Oh and I forgot to mention, I can open websites as well. Just say:
-    <br>
-    "open website dot com"
-    <br>
-    and it will open in a new tab
-    </p>
-    <form action="/open" method="post">
-        <input type="submit" value="Press me and say a website!">
-    </form>
+<div class="content">
+    <div class="title">
+        <h1>Welcome to Hans, the Speech Recognizer</h1>
+    </div>
+
+    <div class="info"> 
+        <p id="hans_two"> Hans loves two things,</p>
+        <p id="hans_things">to show you colors and to open websites for you</p>
+    </div>
+    <div class="say_color">
+        <form action="/command" id="color_form" method="post">
+            <input type="submit" id="color_button" value="Press me and say a color!">
+            <p id="you_said"> You said: {{ command }}</p>
+        </form>
+        <span id=circle> {{ no_color }}</span> 
+    </div>
+    <div class="web">
+        <form action="/open" id="web_form" method="post">
+            <input type="submit" id="web_button" value="Press me and say a website!">
+            <p id="you_said"> You said: {{ website }}</p>
+        </form>
+    </div>
+</div>
 </body>
 </html>
