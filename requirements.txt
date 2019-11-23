@@ -7,7 +7,7 @@ conda-verify==3.4.2
 Flask==1.1.1
 Jinja2==2.10.3
 MarkupSafe==1.1.1
-portaudio=19.6.0
+portaudio==19.6.0
 py==1.8.0
 PyAudio==0.2.11
 requests==2.22.0
