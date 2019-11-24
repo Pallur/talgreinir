@@ -7,7 +7,7 @@ MarkupSafe==1.1.1
 py==1.8.0
 # why you no work
 # ./lib/portaudio
-PyAudio==0.2.11 
+# PyAudio==0.2.11 
 # PyAudio-0.2.11-cp37-cp37m-win_amd64
 # i need the .whl file 
 # ./PyAudio-0.2.11-cp37-cp37m-win32.whl
