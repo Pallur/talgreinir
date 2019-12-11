@@ -1,7 +1,4 @@
 alabaster==0.7.12
-anaconda-client==1.7.2
-anaconda-navigator==1.9.7
-anaconda-project==0.8.3
 asn1crypto==1.0.1
 astroid==2.3.1
 astropy==3.2.1
@@ -73,12 +70,6 @@ Jinja2==2.10.3
 joblib==0.13.2
 json5==0.8.5
 jsonschema==3.0.2
-jupyter==1.0.0
-jupyter-client==5.3.3
-jupyter-console==6.0.0
-jupyter-core==4.5.0
-jupyterlab==1.1.4
-jupyterlab-server==1.0.6
 keyring==18.0.0
 kiwisolver==1.1.0
 lazy-object-proxy==1.4.2
