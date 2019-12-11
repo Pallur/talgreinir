@@ -1,0 +1,13 @@
+name: py37
+channels:
+  - conda-forge
+dependencies:
+  - certifi=2019.9.11
+  - Click=7.0
+  - Flask=1.1.1
+  - gunicorn=19.10.0
+  - Jinja2=2.10.3
+  - MarkupSafe=1.1.1
+  - py=1.8.0
+  - requests=2.22.0
+  - SpeechRecognition=3.8.1
