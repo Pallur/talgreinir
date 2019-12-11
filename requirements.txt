@@ -25,10 +25,6 @@ Click==7.0
 cloudpickle==1.2.2
 colorama==0.4.1
 comtypes==1.1.7
-conda==4.7.12
-conda-build==3.18.9
-conda-package-handling==1.6.0
-conda-verify==3.4.2
 contextlib2==0.6.0
 cryptography==2.7
 cycler==0.10.0
@@ -57,10 +53,6 @@ idna==2.8
 imageio==2.6.0
 imagesize==1.1.0
 importlib-metadata==0.23
-ipykernel==5.1.2
-ipython==7.8.0
-ipython-genutils==0.2.0
-ipywidgets==7.5.1
 isort==4.3.21
 itsdangerous==1.1.0
 jdcal==1.4.1
