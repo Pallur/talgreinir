@@ -1,6 +1,7 @@
 import speech_recognition as sr
 import re
 import webbrowser
+import pyaudio
 
 # command to recognize the speech using a microphone
 def voice_command():
