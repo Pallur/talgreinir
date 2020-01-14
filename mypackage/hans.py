@@ -3,7 +3,7 @@ import re
 import webbrowser
 import pyaudio
 
-# command to recognize the speech using a microphone
+# * command to recognize the speech using a microphone
 def voice_command():
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -19,7 +19,7 @@ def voice_command():
     return command
 
 def assistant(command):
-    # command to open a website
+    # * command to open a website
     if 'open' in command:
         reg_ex = re.search('open (.+)', command)
         if reg_ex:
