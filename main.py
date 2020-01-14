@@ -4,12 +4,12 @@ from mypackage.colorapi import color_api, name_hex
 
 app = Flask(__name__)
 
-# default page
+# * default page
 @app.route('/')
 def home():
     return render_template("home.html")
 
-# command page
+# * command page
 @app.route('/command', methods=['GET', 'POST'])
 def your_command():
     if request.method == 'POST':
@@ -17,13 +17,13 @@ def your_command():
         color_hex = name_hex(color_api())
         for c, h in color_hex:
             if vc == c.lower():
-                # if color exist, the color will be shown
+                # * if color exist, the color will be shown
                 return render_template("home.html", cname = c, chex = h, command = vc)
     
-    # if no match, a message will be shown
+    # * if no match, a message will be shown
     return render_template("home.html", no_color = "No color found", command = vc)
         
-# open page page
+# * open page page
 @app.route('/open', methods=['GET', 'POST'])
 def open_web():
     if request.method == 'POST':
