@@ -1,8 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for
 from mypackage.hans import voice_command, assistant
 from mypackage.colorapi import color_api, name_hex
+from flask_sslify import SSLify
 
 app = Flask(__name__)
+sslify = SSLify(app)
+
+# ! if 'DYNO' in os.envirion:
+# !    sslify = SSLify(app)
 
 # * default page
 @app.route('/')
