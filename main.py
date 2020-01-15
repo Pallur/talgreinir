@@ -19,13 +19,15 @@ def home():
 def your_command():
     if request.method == 'POST':
         vc = voice_command()
-        mlist = mic_list()
+
+        # ! mlist = mic_list() all possible microphones available on system
+        # ! , m_list = mlist   add to render_temp if want to add again
 
         color_hex = name_hex(color_api())
         for c, h in color_hex:
             if vc == c.lower():
                 # * if color exist, the color will be shown
-                return render_template("home.html", cname = c, chex = h, command = vc, m_list = mlist)
+                return render_template("home.html", cname = c, chex = h, command = vc)
     
     # * if no match, a message will be shown
     return render_template("home.html", no_color = "No color found", command = vc)

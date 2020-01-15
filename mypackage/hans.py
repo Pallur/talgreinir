@@ -17,7 +17,7 @@ def voice_command():
             print ("Input Device id ", i, " - ", p.get_device_info_by_host_api_device_index(0, i).get('name'))
 
     r = sr.Recognizer()
-    with sr.Microphone() as source:
+    with sr.Microphone(device_index = 1) as source:
         print(sr.Microphone())
         print("Say something..")
         r.pause_threshold = 1
