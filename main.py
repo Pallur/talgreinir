@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from mypackage.hans import voice_command, assistant
+from mypackage.hans import voice_command, assistant, mic_list
 from mypackage.colorapi import color_api, name_hex
 from flask_sslify import SSLify
 
@@ -12,7 +12,7 @@ sslify = SSLify(app)
 # * default page
 @app.route('/')
 def home():
-    return render_template("home.html")
+    return render_template("home.html", mlist = mic_list)
 
 # * command page
 @app.route('/command', methods=['GET', 'POST'])

@@ -18,6 +18,10 @@ def voice_command():
         command = voice_command();
     return command
 
+def mic_list():
+    m_list = sr.Microphone.list_microphone_names()
+    return m_list
+
 def assistant(command):
     # * command to open a website
     if 'open' in command:

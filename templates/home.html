@@ -18,7 +18,8 @@
 
       processor.onaudioprocess = function(e) {
         // do something
-        console.log(e.inputBuffer);
+
+        console.log(source);
       };
     };
 
@@ -108,6 +109,7 @@
     <div class="info"> 
         <p id="hans_two"> Hans loves two things,</p>
         <p id="hans_things">to show you colors and to open websites for you</p>
+        <p id="">List of Microphones: {{ mlist }}</p>
     </div>
     <div class="say_color">
         <form action="/command" id="color_form" method="post">
