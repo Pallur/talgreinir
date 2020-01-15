@@ -2,11 +2,23 @@ import speech_recognition as sr
 import re
 import webbrowser
 import pyaudio
+import logging
 
 # * command to recognize the speech using a microphone
 def voice_command():
+    # ? mlist = sr.Microphone.list_microphone_names()
+    # ? print("microphones are: ", mlist)
+
+    p = pyaudio.PyAudio()
+    info = p.get_host_api_info_by_index(0)
+    numdevices = info.get('deviceCount')
+    for i in range(0, numdevices):
+        if (p.get_device_info_by_host_api_device_index(0, i).get('maxInputChannels')) > 0:
+            print ("Input Device id ", i, " - ", p.get_device_info_by_host_api_device_index(0, i).get('name'))
+
     r = sr.Recognizer()
     with sr.Microphone() as source:
+        print(sr.Microphone())
         print("Say something..")
         r.pause_threshold = 1
         audio = r.listen(source)
@@ -18,9 +30,11 @@ def voice_command():
         command = voice_command();
     return command
 
+# * display available microphones (?)
 def mic_list():
-    m_list = sr.Microphone.list_microphone_names()
-    return m_list
+    mlist = sr.Microphone.list_microphone_names()
+
+    return mlist
 
 def assistant(command):
     # * command to open a website

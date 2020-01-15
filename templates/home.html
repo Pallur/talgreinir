@@ -18,10 +18,12 @@
 
       processor.onaudioprocess = function(e) {
         // do something
-
-        console.log(source);
+        // connect to pyaudio microphone somehow or ???
+        
       };
     };
+
+    // navigator.mediaDevices.enumerateDevices()
 
     navigator.mediaDevices.getUserMedia({ audio: true, video: false })
       .then(handleSuccess);
@@ -109,13 +111,13 @@
     <div class="info"> 
         <p id="hans_two"> Hans loves two things,</p>
         <p id="hans_things">to show you colors and to open websites for you</p>
-        <p id="">List of Microphones: {{ mlist }}</p>
     </div>
     <div class="say_color">
         <form action="/command" id="color_form" method="post">
             <input type="submit" id="color_button" value="Press me and say a color!">
             <p id="you_said"> You said: {{ command }}</p>
         </form>
+        <p id="">List of Microphones: {{ m_list }}</p>
         <span id=circle>{{ no_color }}</span> 
     </div>
     <div class="web">

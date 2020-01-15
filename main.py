@@ -12,18 +12,20 @@ sslify = SSLify(app)
 # * default page
 @app.route('/')
 def home():
-    return render_template("home.html", mlist = mic_list)
+    return render_template("home.html")
 
 # * command page
 @app.route('/command', methods=['GET', 'POST'])
 def your_command():
     if request.method == 'POST':
         vc = voice_command()
+        mlist = mic_list()
+
         color_hex = name_hex(color_api())
         for c, h in color_hex:
             if vc == c.lower():
                 # * if color exist, the color will be shown
-                return render_template("home.html", cname = c, chex = h, command = vc)
+                return render_template("home.html", cname = c, chex = h, command = vc, m_list = mlist)
     
     # * if no match, a message will be shown
     return render_template("home.html", no_color = "No color found", command = vc)
