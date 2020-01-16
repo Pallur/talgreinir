@@ -2,9 +2,11 @@ from flask import Flask, render_template, request, redirect, url_for
 from mypackage.hans import voice_command, assistant, mic_list
 from mypackage.colorapi import color_api, name_hex
 from flask_sslify import SSLify
+from flask_socketio import SocketIO
 
 app = Flask(__name__)
 sslify = SSLify(app)
+socketio = SocketIO(app)
 
 # ! if 'DYNO' in os.envirion:
 # !    sslify = SSLify(app)
@@ -15,7 +17,7 @@ def home():
     return render_template("home.html")
 
 # * command page
-@app.route('/command', methods=['GET', 'POST'])
+@app.route('/command', methods=['GET', 'POST'], apply=[websocket])
 def your_command():
     if request.method == 'POST':
         vc = voice_command()
@@ -33,11 +35,11 @@ def your_command():
     return render_template("home.html", no_color = "No color found", command = vc)
         
 # * open page page
-@app.route('/open', methods=['GET', 'POST'])
+@app.route('/open', methods=['GET', 'POST'], apply=[websocket])
 def open_web():
     if request.method == 'POST':
         website = assistant(voice_command())
         return render_template("home.html", open = website)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    socketio.run(app)
