@@ -1,6 +1,6 @@
 # Hans likes colors and to open webs
 
-This is Hans, a speech recognizer. He can display 15.0000 colorsf and open any website you desire. 
+This is Hans, a speech recognizer. He can display 18.000 colors and open any website you desire. 
 He can only speak english.
 
 ---
@@ -44,13 +44,12 @@ To run Hans with flask you have to export the FLASK_APP environment variable:
 * python -m flask run
     "Running on http://127.0.0.1:5000/"
 
+**This might be fixed**
 To get the CSS to work, you have to hard reset the browser (Ctrl + R OR Ctrl + F5). This is explained on the site it self *(hardcoded in the home.html)*
 
----
+-----------------
 
-Now you might be asking "but why is 'it' named Hans?". 
-
----
+Lýsing á verkefninu og hindrunum sem ég lenti í:
 
 Þegar ég byrjaði á verkefninu var ég að fikta mikið með það sem hægt er að finna á tal.ru.is. Fann út að sú síða er byggð á [kalda](https://github.com/kaldi-asr/kaldi). Eftir að hafa verið að reyna að setja það upp á windows í heil langan tíma þá fór ég í það að setja upp Virtual vél og keyra Ubuntu á henni því ég bjóst við að það væri lítið mál að nota Linux með þessu.. **_það gékk ekki_**. 
 
