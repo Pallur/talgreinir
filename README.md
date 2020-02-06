@@ -1,11 +1,12 @@
 # Hans likes colors and to open webs
 
-This is Hans, a speech recognizer. He can display 8 colors (the main colors) and open any website you desire. 
+This is Hans, a speech recognizer. He can display 15.0000 colorsf and open any website you desire. 
 He can only speak english.
 
 ---
 
 ## Installation
+You must have Python 3+
 
 Enter your desired directory in the terminal and do:
 
@@ -43,7 +44,7 @@ To run Hans with flask you have to export the FLASK_APP environment variable:
 * python -m flask run
     "Running on http://127.0.0.1:5000/"
 
-To get the CSS to work, you have to hard reset the browser. This is explained on the site it self *(hardcoded in the home.html)*
+To get the CSS to work, you have to hard reset the browser (Ctrl + R OR Ctrl + F5). This is explained on the site it self *(hardcoded in the home.html)*
 
 ---
 
