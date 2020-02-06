@@ -5,6 +5,10 @@ He can only speak english.
 
 ---
 
+Developed with the Brave, a Chromium browser. Might not work with others.
+
+---
+
 ## Installation
 You must have Python 3+
 
